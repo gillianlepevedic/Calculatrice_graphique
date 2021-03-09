@@ -47,7 +47,6 @@ public class Fenetre extends JFrame {
 		ImageIcon img = new ImageIcon("./img/pipou_happy.png");
 	    this.setIconImage(img.getImage());
 	    this.setVisible(true);
-	    
 		this.setSize(415,540);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
@@ -57,6 +56,7 @@ public class Fenetre extends JFrame {
 
 	}
 	private void initialisationDesBouton(){
+
 		this.setLayout(null);
 		
 		afficheur = new JLabel("Calculatrice allumé", SwingConstants.RIGHT);
@@ -258,7 +258,7 @@ public class Fenetre extends JFrame {
 			 afficheur.setText( calcul.calcul());
 		 }catch(Exception e){
 			 System.out.println(e);
-			 afficheur.setText(e.toString());
+			 afficheur.setText("calcul impossible");
 		 }
 		 calcul.reinitialisation();
 	 }
